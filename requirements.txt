@@ -49,7 +49,6 @@ huggingface-hub==0.33.5
 idna==3.10
 imageio==2.37.0
 inflection==0.5.1
-insightface @ file:///C:/Users/misre/ComfyUI/insightface-0.7.3-cp310-cp310-win_amd64.whl#sha256=47aa0571b2aadd8545d4bc7615dfbc374c10180c283b7ac65058fcb41ed4df86
 Jinja2==3.1.6
 joblib==1.5.1
 kiwisolver==1.4.8
@@ -116,4 +115,5 @@ vine==5.1.0
 wcwidth==0.2.13
 whitenoise==6.9.0
 yarl==1.20.1
---no-binary :all: insightface
+# Only install insightface on Windows (local dev)
+insightface; sys_platform == "win32"
